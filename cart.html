@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Ichiban Rent</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' fill='%231a1a1a'/%3E%3Ctext x='16' y='20' font-family='Arial' font-size='14' fill='white' text-anchor='middle'%3EIC%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' fill='%231a1a1a'/%3E%3Ctext x='20' y='25' font-family='Arial' font-size='16' fill='white' text-anchor='middle'%3EIC%3C/text%3E%3C/svg%3E" alt="Logo" class="logo-img">
+                <span>Ichiban Rent</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="explore.html"><i class="fas fa-compass"></i> Explore</a></li>
+                    <li><a href="saved.html"><i class="fas fa-heart"></i> Saved</a></li>
+                    <li class="active"><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> Purchase History</a></li>
+                    <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="header-content">
+                    <h1>Rental Cart</h1>
+                    <p>Review and Confirm Your Car Rental</p>
+                </div>
+                <div class="user-actions">
+                    <button class="icon-btn"><i class="fas fa-envelope"></i></button>
+                    <button class="icon-btn"><i class="fas fa-bell"></i></button>
+                    <button class="profile-btn">
+                        <img src="data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' fill='%231a1a1a'/%3E%3Ctext x='16' y='20' font-family='Arial' font-size='14' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" alt="Profile">
+                    </button>
+                </div>
+            </header>
+
+            <div class="cart-container">
+                <!-- Cart content will be added here via JavaScript -->
+                <div class="empty-state" id="emptyCart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h2>Your cart is empty</h2>
+                    <p>Add a car to start your rental process</p>
+                    <a href="explore.html" class="explore-btn">Browse Cars</a>
+                </div>
+
+                <div class="cart-content" id="cartContent" style="display: none;">
+                    <div class="cart-item">
+                        <!-- Car details will be populated via JavaScript -->
+                    </div>
+                    
+                    <div class="rental-summary">
+                        <h3>Rental Summary</h3>
+                        <div class="summary-item">
+                            <span>Rental Duration</span>
+                            <span id="rentalDuration">0 Days</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Base Price</span>
+                            <span id="basePrice">Rp 0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Insurance</span>
+                            <span id="insurance">Rp 0</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total</span>
+                            <span id="totalPrice">Rp 0</span>
+                        </div>
+                        <button class="checkout-btn">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
